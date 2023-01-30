@@ -1,34 +1,33 @@
 package ie.atu_ArrayList;
 
+import java.util.Scanner;
+
 public class ArrayDemo {
+
+
     public static void main(String[] args) {
-        int[] Array;
-        Array = new int[10];
-        Array[0]= 100;
-        Array[1]= 200;
-        Array[2]= 300;
-        Array[3]= 400;
-        Array[4]= 500;
-        Array[5]= 600;
-        Array[6]= 700;
-        Array[7]= 800;
-        Array[8]= 900;
-        Array[9]= 1000;
-        System.out.println("Element at index 0"+ Array[0]);
-        System.out.println("Element at index 1"+ Array[1]);
-        System.out.println("Element at index 2"+ Array[2]);
-        System.out.println("Element at index 3"+ Array[3]);
-        System.out.println("Element at index 4"+ Array[4]);
-        System.out.println("Element at index 5"+ Array[5]);
-        System.out.println("Element at index 6"+ Array[6]);
-        System.out.println("Element at index 7"+ Array[7]);
-        System.out.println("Element at index 8"+ Array[8]);
-        System.out.println("Element at index 9"+ Array[9]);
+        int[] arrayA;
+        arrayA = new int[10];
+        int i,x;
+        Scanner input = new Scanner(System.in);
+       for(x = 0;x<=10;x++){
+           try {
+               System.out.println("Please enter a new value");
+               arrayA[x] = input.nextInt();
 
+           }
+           catch (ArrayIndexOutOfBoundsException aiob) {
+               System.out.println("Value is not within array");
+           }
 
-
-
+       }
+       for(i=0;i<10;i++){
+           System.out.println("Element at index" + i +": "+ arrayA[i]);
+        }
 
 
     }
+
+
+
 }
